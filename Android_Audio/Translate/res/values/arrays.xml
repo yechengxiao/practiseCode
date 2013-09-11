@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--language列表 包含全称 简称-->
+    <array name="languages">
+        <item>Chinese Simplified(zh-CN)</item>
+        <item>Chinese Traditional(zh-TW)</item>
+        <item>English(en)</item>
+    </array>
+</resources>

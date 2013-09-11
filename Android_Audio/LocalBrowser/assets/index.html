@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>位于assets/</title>
+    <script language="JavaScript">
+        function callJS(arg) {//android将调用该函数
+            document.getElementById('replacement').innerHTML = arg;//将数据插入replacement标签
+        }
+    </script>
+</head>
+<body>
+<h1>WebView</h1>
+
+<p>
+    <a href="#" onclick="window.alert('Alert from JavaScript')">
+        Display JavaScript alert
+    </a>
+</p>
+
+<p>
+    <a href="#" onclick="window.android.callAndroid('Hello from Browser')">
+        Call Android from JavaScript
+    </a>
+</p>
+
+<p id="replacement"></p>
+</body>
+</html>

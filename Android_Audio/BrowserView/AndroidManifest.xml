@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.BrowserView"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <!--如果没有<uses-permission，Android不会让应用程序访问因特网，还会显示“Web page not available”（网
+页不可用）错误-->
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="16"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <activity android:name="BrowserView"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>V
+    </application>
+</manifest>

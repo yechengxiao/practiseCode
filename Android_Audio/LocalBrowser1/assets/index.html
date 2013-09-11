@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script language="JavaScript">
+        function callJS(arg) {
+            document.getElementById('replacement').innerHTML = arg;
+        }
+    </script>
+</head>
+<body>
+<h1>This's WebView</h1>
+
+<p>
+    <a href="#" onClick="window.alert('Alert from JavaScript')">
+        Display JavaScript alert
+    </a>
+</p>
+
+<p href="#" onClick="window.android.callAndroid('Hello from Browser')">
+    <a>
+        Call Android from JavaScript
+    </a>
+</p>
+
+<p id="replacement">
+
+</p>
+</body>
+</html>
