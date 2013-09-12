@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.Events"
+          package="com.example.events"
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="16"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <provider android:name=".EventProvider"
+                  android:authorities="com.example.events"/>
+
         <activity android:name="Events"
                   android:label="@string/app_name">
             <intent-filter>
