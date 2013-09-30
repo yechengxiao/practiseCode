@@ -1,3 +1,5 @@
+package five;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ycx
@@ -20,11 +22,11 @@ interface Instrument5 {
 
 class Wind5 implements Instrument5 {
     public void play() {
-        System.out.println("Wind5.play()");
+        System.out.println("five.Wind5.play()");
     }
 
     public String what() {
-        return "Wind5";
+        return "five.Wind5";
     }
 
     public void adjust() {
@@ -33,11 +35,11 @@ class Wind5 implements Instrument5 {
 
 class Percussion5 implements Instrument5 {
     public void play() {
-        System.out.println("Percussion5.play()");
+        System.out.println("five.Percussion5.play()");
     }
 
     public String what() {
-        return "Percussion5";
+        return "five.Percussion5";
     }
 
     public void adjust() {
@@ -46,11 +48,11 @@ class Percussion5 implements Instrument5 {
 
 class Stringed5 implements Instrument5 {
     public void play() {
-        System.out.println("Stringed5.play()");
+        System.out.println("five.Stringed5.play()");
     }
 
     public String what() {
-        return "Stringed5";
+        return "five.Stringed5";
     }
 
     public void adjust() {
@@ -59,21 +61,21 @@ class Stringed5 implements Instrument5 {
 
 class Brass5 extends Wind5 {
     public void play() {
-        System.out.println("Brass5.play()");
+        System.out.println("five.Brass5.play()");
     }
 
     public void adjust() {
-        System.out.println("Brass5.adjust()");
+        System.out.println("five.Brass5.adjust()");
     }
 }
 
 class Woodwind5 extends Wind5 {
     public void play() {
-        System.out.println("Woodwind5.play()");
+        System.out.println("five.Woodwind5.play()");
     }
 
     public String what() {
-        return "Woodwind5";
+        return "five.Woodwind5";
     }
 }
 

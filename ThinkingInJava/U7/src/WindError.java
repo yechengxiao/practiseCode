@@ -15,8 +15,12 @@ class InstrumentX {
 }
 
 class WindX extends InstrumentX {
-    public void play(NoteX noteX) {//这是overload，过载了，并非覆盖基类方法
-        System.out.println("Windx.play(NoteX n)");
+//    public void play(NoteX noteX) {//这是overload，过载了，并非覆盖基类方法
+//        System.out.println("Windx.play(NoteX n)");
+//    }
+
+    public void play(int x) {
+        System.out.println("Windx.play()");
     }
 }
 
