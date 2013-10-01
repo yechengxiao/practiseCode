@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>文字提示</title>
+    <script type="text/javascript" src="./jquery-1.3.1.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #fff;
+            font: 80% Arial, Helvetica, sans-serif;
+            color: #555;
+            ling-height: 180%;
+        }
+
+        p {
+            clear: both;
+            margint: 0;
+            padding: .53em;
+        }
+
+            /* tooltip */
+        #tooltip {
+            position: absolute;
+            border: 1px solid #333;
+            background: #f7f5d1;
+            padding: 1px;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        //demo1-文字提示-第三步.html
+        //文字快速提示，提示随鼠标移动
+        $(function () {
+            var x = 10;//偏移量
+            var y = 20;
+
+            $("a.tooltip").mouseover(function (e) {
+                this.myTitle = this.title;
+                this.title = "";
+                var tooltip = "<div id='tooltip' >" + this.myTitle + "<\/div>";
+                $("body").append(tooltip);//把div追加到文档中
+                $("#tooltip").css({
+                    "top": (e.pageY + y) + "px",
+                    "left": (e.pageX + x) + "px"
+                }).show("fast");//设置x坐标和y坐标，并且显示
+            }).mouseout(function () {
+                        this.title = this.myTitle;
+                        $("#tooltip").remove();
+                    }).mousemove(function (e) {
+                        $("#tooltip").css({
+                            "top": (e.pageY + y) + "px",
+                            "left": (e.pageX + x) + "px"
+
+                        });
+                    });
+~
+        });
+    </script>
+</head>
+<body>
+<!--文字提示，比title显示快-->
+
+<p><a title="我的超链接提示1" class="tooltip">我的超链接提示1</a></p>
+
+<p><a title="我的超链接提示2" class="tooltip">我的超链接提示2</a></p>
+
+<p><a title="自带超链接提示1">自带超链接提示1</a></p>
+
+<p><a title="自带超链接提示2">自带超链接提示2</a></p>
+</body>
+</html>
