@@ -1,6 +1,6 @@
-# -*-coding:utf8-*-
-# copy files to one file
-# 还不能处理目录
+------------------------CopyFile.py------------------------
+#-*-coding:utf8-*-
+#copy files to one file
 from sys import argv
 
 def receive_file(out):
