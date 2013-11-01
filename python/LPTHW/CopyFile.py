@@ -2,6 +2,7 @@
 # copy files to one file
 # 还不能处理目录
 from sys import argv
+import os
 
 def receive_file(out):
     file_amount=len(argv)
@@ -12,7 +13,8 @@ def receive_file(out):
 	from_file=argv[i]
 	to_file=out
 
-	copy_file(from_file,to_file)
+        if os.path.isfile(from_file):
+	    copy_file(from_file,to_file)
 
 
 def copy_file(from_file,to_file):
