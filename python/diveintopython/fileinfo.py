@@ -32,7 +32,7 @@ def stripnulls(data): # 剥掉null
 class FileInfo(UserDict):
     "store file metadata"
 
-    def __init__(self, filename=None):
+    def __init__(self, filename = None):
         UserDict.__init__(self)
         self["name"] = filename
 
@@ -68,6 +68,7 @@ class MP3FileInfo(FileInfo):
 
     def __setitem__(self, key, item):
         if key == "name" and item:
+	    print "item: %s " % item
             self.__parse(item)
         FileInfo.__setitem__(self, key, item)
 
@@ -80,7 +81,7 @@ def listDirectory(directory, fileExtList):
                 if os.path.splitext(f)[1] in fileExtList]
 
     def getFileInfoClass(filename, module=sys.modules[FileInfo.__module__]):
-        "get file info class form filename extension"
+	"get file info class from filename extension"
 
         subclass = "%sFileInfo" % os.path.splitext(filename)[1].upper()[1:]
         return hasattr(module, subclass) and getattr(module, subclass) or FileInfo

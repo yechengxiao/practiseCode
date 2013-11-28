@@ -16,7 +16,6 @@ class CentralCorridor:
 
     def action(self):
         action = raw_input(">>shoot! or dedge! or tell a joke or>>")
-	print 
 
         if action == "shoot!":
             print "Quick on the draw you yank out your blaster and fire it at the Gothon."
@@ -25,7 +24,7 @@ class CentralCorridor:
             print "makes him fly into an insane rage and blast you repeatedly int the face until"
             print "you are dead. Then he eats you.\n"
             #return {'Game': 'death'}
-	    return self.action()
+            return self.action()
 
         elif action == "dedge!":
             print "Like a world class boxer you dodge, weave, slip and slide right"
@@ -34,7 +33,7 @@ class CentralCorridor:
             print "You wake up shortly after only to die as the Gothon stomps on"
             print "your head and eats you.\n"
             #return {'Game': 'death'}
-	    return self.action()
+            return self.action()
 
         elif action == "tell a joke":
             print "Lucky for you they made you learn Gothon insults in the academy."
