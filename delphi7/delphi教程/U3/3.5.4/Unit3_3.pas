@@ -1,0 +1,80 @@
+unit Unit3_3;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    RadioGroup1: TRadioGroup;
+    ColorDialog1: TColorDialog;
+    FontDialog1: TFontDialog;
+    Memo1: TMemo;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure RadioGroup1Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject); //设置颜色
+begin
+  with ColorDialog1 do // 为了减少输入的字符,不必每次重复名字,直接写变量
+  begin
+    color := Memo1.Color;
+    if Execute then
+    begin
+      Memo1.Color := Color;
+    end;
+  end;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject); //设置字体
+begin
+  with FontDialog1 do
+  begin
+    font := Memo1.Font;
+    if Execute then
+    begin
+      Memo1.Font := Font;
+    end;
+  end;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject); //修正内容
+begin
+  Memo1.Lines.text := ' 布娃娃要睡觉' + chr(13) + chr(13) + //chr(13 )为回车符
+  '布娃娃，' + chr(13) + ' 要睡觉。' + chr(13) +
+    '小棉被，' + chr(13) + ' 盖盖好，' + chr(13) +
+    '伸出脚丫' + chr(13) + ' 乘风凉，' + chr(13) +
+    '阿嚏一声，' + chr(13) + ' 吓走小花猫。';
+end;
+
+procedure TForm1.RadioGroup1Click(Sender: TObject); //对齐设置
+begin
+  case RadioGroup1.ItemIndex of
+    0: Memo1.Alignment := taLeftJustify;
+    1: Memo1.Alignment := taCenter;
+    2: Memo1.Alignment := taRightJustify;
+  end;
+end;
+
+end.
+
