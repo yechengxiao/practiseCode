@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">灯</string>
+    <string name="setting_activity_label">设置</string>
+
+    <string name="action_setting_title">设置</string>
+    <string name="action_about_title">关于</string>
+    <string name="action_sos_title">SOS</string>
+
+    <string name="pref_title_light_or_not">开启应用立刻亮灯</string>
+    <string name="pref_summary_light_or_not">勾选后，在应用首次打开时会自动亮灯</string>
+</resources>
