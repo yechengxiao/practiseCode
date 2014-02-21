@@ -23,7 +23,6 @@ public class MainActivity extends Activity {
     private boolean settings_light_or_not;
     private static final String TAG = "MAIN_ACTIVITY_TAG";
     private Timer timer;
-    private Timer SOSTimer;
     private Camera camera = Camera.open();
 
     /**
@@ -193,7 +192,15 @@ public class MainActivity extends Activity {
             TimerTask toggleLightTimerTask = new TimerTask() {
                 @Override
                 public void run() {
-                    tc.toggleLightInner();
+		     /*
+		      http://stackoverflow.com/questions/18656813/android-only-the-original-thread-that-created-a-view-hierarchy-can-touch-its-vi
+		     */
+			runOnUiThread(new Runnable() { // 在主线程上更新UI
+			@Override
+			public void run() {
+				tc.toggleLightInner();
+			}
+	           });
                 }
             };
             SOSTimer = new Timer();
