@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
     private boolean settings_light_or_not;
     private static final String TAG = "MAIN_ACTIVITY_TAG";
     private Timer timer;
+    private Timer SOSTimer;
     private Camera camera = Camera.open();
 
     /**
