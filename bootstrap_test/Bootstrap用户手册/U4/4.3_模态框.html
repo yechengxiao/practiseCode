@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>4.3 模态框</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--just for dev -->
+    <link rel="stylesheet" href="../../bootstrap2/css/bootstrap.css">
+</head>
+
+<body>
+
+<!--居中：class="container"-->
+<div class="container">
+    <h1>4.3 模态框</h1>
+    <!-- 触发模态框的按钮 -->
+    <a href="#" role="button" class="btn" data-toggle="modal" data-target="#myModal">Launch demo modal</a>
+
+    <!-- 模态框 -->
+    <div id="myModal" class="modal hide fade" tabindex="-1"
+         role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Modal header</h3>
+        </div>
+
+        <div class="modal-body">
+            <p>One fine body...</p>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../jquery-1.10.1.js"></script>
+<!--just for dev -->
+<script src="../../bootstrap2/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    // 4.3.2 模态框选项
+    $(document).ready(function () {
+        // alert("page has loaded");
+
+        $('#myModal').modal({
+            keyboard: true, // true esc 键关闭模态框
+            backdrop: false // false 不想单击背板关闭模态框，但是背景怎么没用半透明了？
+            // show: true // 初始化时显示模态框
+        });
+
+        $('#myModal').modal('toggle'); // 手动开关模态框
+
+        $('#myModal').on("hidden", function () {
+            alert('Hey girl, I heard you like modals...');
+        });
+
+    });
+</script>
+
+</body>
+</html>

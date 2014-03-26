@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>4.6 可切换的标签页</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--just for dev -->
+    <link rel="stylesheet" href="../../bootstrap2/css/bootstrap.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>4.6 可切换的标签页</h1>
+
+    <div class="tabbable tabs-left">
+        <h6>先创建一个 .nav</h6>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+            <li><a href="#profile" data-toggle="tab">Profile</a></li>
+            <li><a href="#messages" data-toggle="tab">Messages</a></li>
+            <li><a href="#settigns" data-toggle="tab">Settings</a></li>
+        </ul>
+
+        <h6>tab内容放在.tab-content的div中</h6>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="home">this is home</div>
+            <div class="tab-pane" id="profile">this is profile</div>
+            <div class="tab-pane" id="messages">this is messages</div>
+            <div class="tab-pane" id="settings">this is settings</div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../jquery-1.10.1.js"></script>
+<!--just for dev -->
+<script src="../../bootstrap2/js/bootstrap.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

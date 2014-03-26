@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>2.4.5 表单控件的状态</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--just for dev -->
+    <link rel="stylesheet" href="../../bootstrap2/css/bootstrap.css">
+</head>
+
+<body>
+
+<!--居中：class="container"-->
+<div class="container">
+    <h2>1.输入控件获得焦点</h2>
+    <input type="text" class="input-medium" placeholder="this is focused"/>
+
+    <h2>2.禁用状态的输入框</h2>
+    <input type="text" class="input-medium" placeholder="this is disabled" disabled/>
+
+    <h2>3.验证状态</h2>
+
+    <div class="control-group warning">
+        <label class="control-label" for="inputWarning">Input with warning</label>
+
+        <div class="controls">
+            <input type="text" id="inputWarning">
+            <span class="help-inline">something may gone warning</span>
+        </div>
+    </div>
+
+    <div class="control-group success">
+        <label class="control-label" for="inputSuccess">Input with success</label>
+
+        <div class="controls">
+            <input type="text" id="inputSuccess">
+            <span class="help-inline">something may gone success</span>
+        </div>
+    </div>
+
+    <div class="control-group info">
+        <label class="control-label" for="inputInfo">Input with info</label>
+
+        <div class="controls">
+            <input type="text" id="inputInfo">
+            <span class="help-inline">soemthind may gone info</span>
+        </div>
+    </div>
+
+    <div class="control-group error">
+        <label class="control-label" for="inputError">Input with error</label>
+
+        <div class="controls">
+            <input type="text" id="inputError">
+            <span class="help-inline">something may gone error</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../jquery-1.10.1.js"></script>
+<!--just for dev -->
+<script src="../../bootstrap2/js/bootstrap.js"></script>
+</body>
+</html>

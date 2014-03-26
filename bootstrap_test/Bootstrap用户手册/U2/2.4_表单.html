@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>表单2.4</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--just for dev -->
+    <link rel="stylesheet" href="../../bootstrap2/css/bootstrap.css">
+</head>
+
+<body>
+
+<!--居中：class="container"-->
+<div class="container">
+    <h2>表单：</h2>
+
+    <form>
+        <!--fieldset 元素可将表单内的相关元素分组。-->
+        <fieldset>
+            <!--legend 元素为 fieldset 元素定义标题（caption）。-->
+            <legend>Legend</legend>
+
+            <label for="name">Label name</label>
+            <input type="text" id="name" placeholder="Type something...">
+
+            <span class="help-block">Example block-level help text here.</span>
+
+            <!--还真要这么写-->
+            <label class="checkbox" for="checkbox">
+                ￼￼ <input type="checkbox" id="checkbox">Check me out
+            </label>
+
+            <button type="submit" class="btn">Submit</button>
+        </fieldset>
+    </form>
+
+    <h2>搜索表单：</h2>
+
+    <form class="form-search">
+        <input class="input-large form-search" type="text"/>
+        <button class="btn" type="submit">搜索</button>
+    </form>
+
+    <h2>行内表单:</h2>
+
+    <form class="form-inline">
+        <input type="text" class="input-small" placeholder="email"/>
+        <input type="password" class="input-small" placeholder="password"/>
+
+        <label class="checkbox">
+            <input type="checkbox">remember me
+        </label>
+
+        <button type="button" class="btn">sign in</button>
+    </form>
+
+    <h2>横向表单：</h2>
+    <!--请遵循如下步骤:-->
+    <!--• 为 <form> 元素添加 .form-horizontal 类;-->
+    <!--• 把成对的标签和控件包装在类为 .control-group 的 <div> 中;-->
+    <!--• 为其中每个标签添加 .control-label 类;-->
+    <!--• 把其中每个控件包装在一个类为 .controls 的 <div> 中,以便对齐。-->
+    <form class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="inputEmail">Email</label>
+
+            <div class="controls">
+                <input type="text" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputPassword">Password</label>
+
+            <div class="controls">
+                <input type="password" id="inputPassword" placeholder="Password">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <label class="checkbox">
+                    <input type="checkbox"> Remember me
+                </label>
+                <button type="submit" class="btn">Sign in</button>
+            </div>
+            <!--2.4.4.4 表单动作-->
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../jquery-1.10.1.js"></script>
+<!--just for dev -->
+<script src="../../bootstrap2/js/bootstrap.js"></script>
+</body>
+</html>

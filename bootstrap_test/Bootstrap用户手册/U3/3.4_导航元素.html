@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>3.4 导航</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--just for dev -->
+    <link rel="stylesheet" href="../../bootstrap2/css/bootstrap.css">
+</head>
+
+<body>
+
+<!--居中：class="container"-->
+<div class="container">
+
+    <h2>3.4.1 标签形导航</h2>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Setting</a></li>
+    </ul>
+
+    <h2>3.4.2 胶囊形导航</h2>
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a href="#">Home</a>
+        </li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+        <li class="disabled"><a href="#">Disabled</a></li>
+    </ul>
+
+    <h2>3.4.3 垂直堆叠的导航</h2>
+    <ul class="nav nav-tabs nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Setting</a></li>
+    </ul>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active">
+            <a href="#">Home</a>
+        </li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+        <li class="disabled"><a href="#">Disabled</a></li>
+    </ul>
+
+    <h2>3.4.4 导航加下拉菜单</h2>
+    <ul class="nav nav-tabs">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Dropdown
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>3.4.5 导航列表</h2>
+    <ul class="nav nav-list">
+        <li class="nav-header">List Header</li>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Applications</a></li>
+        <li class="nav-header">Another List Header</li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Help</a></li>
+    </ul>
+
+    <h2>3.4.6 可切换的标签导航</h2>
+
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Meats</a></li>
+            <li><a href="#tab2" data-toggle="tab">More meat</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+                <p>Bacon ipsum dolor sit amet jerky flank...</p>
+            </div>
+            <div class="tab-pane" id="tab2">
+                <p>Beef ribs, turducken ham hock...</p>
+            </div>
+        </div>
+    </div>
+
+    <strong>标签位于左侧</strong>
+
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Section A</a></li>
+            <li><a href="#tab2" data-toggle="tab">Section B</a></li>
+            <li><a href="#tab3" data-toggle="tab">Section C</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+                <p>I'm in Section A.</p>
+            </div>
+            <div class="tab-pane" id="tab2">
+                <p>I'm in Section B.</p>
+            </div>
+            <div class="tab-pane" id="tab3">
+                <p>I'm in Section C.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../jquery-1.10.1.js"></script>
+<!--just for dev -->
+<script src="../../bootstrap2/js/bootstrap.js"></script>
+</body>
+</html>
