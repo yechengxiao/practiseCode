@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>2.5 按钮</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--just for dev -->
+    <link rel="stylesheet" href="../../bootstrap2/css/bootstrap.css">
+</head>
+
+<body>
+
+<!--居中：class="container"-->
+<div class="container">
+    <div class="control-group">
+        <div class="controls">
+            <input type="button" class="btn" value="this is button">
+        </div>
+        <div class="controls">
+            <input type="button" class="btn btn-primary" value="this is btn-primary">
+        </div>
+        <input type="button" class="btn btn-danger" value="this is btn-danger">
+        <input type="button" class="btn btn-link" value="this is btn-link">
+        <input type="button" class="btn btn-info" value="this is btn-info">
+        <input type="button" class="btn btn-inverse" value="this is btn-inverse"/>
+    </div>
+
+
+    <h1>2.5.1 按钮大小</h1>
+    <!--如果你希望按钮大一些或小一些,可以给链接或按钮添加 .btn-large、.btn-small 或 .btn-mini 类-->
+    <p>
+        <button type="button" class="btn btn-large btn-primary">Large button</button>
+        <button type="button" class="btn btn-mini btn-primary">Mini button</button>
+    </p>
+
+    <button class="btn btn-large btn-block btn-primary" type="button"> Block-level button</button>
+    <button class="btn btn-large btn-block" type="button">Block-level button</button>
+
+    <h1>2.5.2 禁用按钮的样式</h1>
+    <button class="btn btn-large disabled" disabled>disabled button</button>
+    <strong>链接还要javascript才能真正disabled，推荐使用button的disabled</strong>
+
+    <a href="#" class="btn btn-large disabled">disabled link</a>
+    <a href="#" class="btn btn-large">link</a>
+
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../jquery-1.10.1.js"></script>
+<!--just for dev -->
+<script src="../../bootstrap2/js/bootstrap.js"></script>
+</body>
+</html>

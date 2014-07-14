@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>2.4.3 扩展的表单控件</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--just for dev -->
+    <link rel="stylesheet" href="../../bootstrap2/css/bootstrap.css">
+</head>
+
+<body>
+
+<!--居中：class="container"-->
+<div class="container">
+    <div class="input-prepend">
+        <span class="add-on">@</span>
+        <input class="span2" id="prependedInput" type="text"
+               placeholder="Username">
+    </div>
+    <div class="input-append">
+        <input class="span2" id="appendedInput" type="text">
+        <span class="add-on">.00</span>
+    </div>
+
+
+    <div class="input-prepend input-append">
+        <span class="add-on">$</span>
+        <input class="span2" id="appendedPrependedInput" type="text">
+        <span class="add-on">.00</span>
+    </div>
+
+
+    <div class="input-append">
+        <input class="span2" id="appendedInputButtons" type="text">
+        <button class="btn" type="button">Search</button>
+        <button class="btn" type="button">Options</button>
+    </div>
+
+    <form class="form-search">
+        <div class="input-append">
+            <input type="text" class="span2 search-query">
+            <button type="submit" class="btn">Search</button>
+        </div>
+        <div class="input-prepend">
+            <button type="submit" class="btn">Search</button>
+            <input type="text" class="span2 search-query">
+        </div>
+    </form>
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../jquery-1.10.1.js"></script>
+<!--just for dev -->
+<script src="../../bootstrap2/js/bootstrap.js"></script>
+</body>
+</html>
