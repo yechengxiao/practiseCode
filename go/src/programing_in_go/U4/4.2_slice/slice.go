@@ -6,11 +6,16 @@ type slice_struct struct{
 	x, y int
 }
 
+type StringSlice []string
+
 func (s slice_struct) String() string {
 	return fmt.Sprintf("{%d %d}", s.x, s.y) //fmt.Println(structs) 使用String()输出内容，而不是内存地址
 }
 
 func main() {
+	strSlice := StringSlice("1", "2", "3") // slice 声明的另一种方式
+	fmt.Print(strSlice)
+
 	// ========================= slice中存放struct
 	struct_in_slice := []slice_struct{{1, 1}, {2, 2}}
 	fmt.Println(struct_in_slice)
@@ -18,6 +23,7 @@ func main() {
 	structs := []*slice_struct{{3, 3}, {4, 4}}
 	fmt.Println(structs)
 
+	// ========================= 数组
 	amounts := []float64{200.11, 200.11, 200.11}
 	sum := 0.0
 	for _, amount := range amounts { // for range 不能修改amount的值
