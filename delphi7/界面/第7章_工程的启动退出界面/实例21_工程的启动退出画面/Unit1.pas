@@ -41,7 +41,7 @@ begin
     Form3.Hide;
     Form3.Free;
   end;
-
+  Application.Terminate;
   // Form1.Free;  // 进程无法结束
 end;
 
